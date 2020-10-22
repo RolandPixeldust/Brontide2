@@ -17,13 +17,14 @@ public class ToolTip : MonoBehaviour
 	private void Awake()
 	{
 		canvasGroup=GetComponentInChildren<CanvasGroup>();
-		distAwayThresh = 400;
+		distAwayThresh = 200;
 		fadeDur = .25f;
 	}
 
 	private void OnEnable()
 	{
-		StartCoroutine(FadeIn());
+		//StartCoroutine(FadeIn());
+		canvasGroup.alpha = 0;
 	}
 
 	IEnumerator FadeIn()
@@ -46,26 +47,34 @@ public class ToolTip : MonoBehaviour
 			yield return null;
 		}
 		canvasGroup.alpha = 0;
-		this.gameObject.SetActive(false);
+		//this.gameObject.SetActive(false);
 	}
 
 
 	void Update()
     {
+		if(SliderControl.master.state == SliderControl.State.Intro || SliderControl.master.impactSlider.value==0) return;
         distAwayFromPointer = Vector3.Distance(transform.position, Input.mousePosition);
-		if(distAwayFromPointer>distAwayThresh)
+		if(distAwayFromPointer<distAwayThresh)
 		{
-			cooldown+=Time.deltaTime;
-			if(active) StartCoroutine(FadeOut());
+			//cooldown+=Time.deltaTime;
+			//if(active) 
+			//{
+			canvasGroup.alpha+=Time.deltaTime*2;
+			canvasGroup.alpha = Mathf.Clamp01(canvasGroup.alpha);
+			active = true;
+			//StartCoroutine(FadeOut());
+			//}
 		}
 		else
 		{
-			if(!active)
-			{
-				canvasGroup.alpha=1;
-				active=true;
-			}
-			cooldown=0;
+			//if(!active)
+			//{
+			canvasGroup.alpha -= Time.deltaTime*2;
+			canvasGroup.alpha = Mathf.Clamp01(canvasGroup.alpha);
+			active =false;
+			//}
+			//cooldown=0;
 		}
 	}
 

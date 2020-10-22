@@ -80,6 +80,7 @@ public class SliderControl : MonoBehaviour
 	const float MAX_MT = 2000;
 
 	[FoldoutGroup("Slider")] public float impact;
+	[FoldoutGroup("Slider")] public GameObject startHere;
 
 	[FoldoutGroup("Parallax")] public float cameraRangeX=2;
 	[FoldoutGroup("Parallax")] public float cameraRangeY=2;
@@ -280,6 +281,12 @@ public class SliderControl : MonoBehaviour
 		dissolveObjs = dissolveObjs.OrderBy(x => x.dissoveThresh).ToArray();
 	}
 
+	public void GoToSite()
+	{
+		#if UNITY_WEBGL
+			Application.ExternalEval("window.open('https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator');");
+		#endif
+	}
 
 	public void ToolTip(int index)
 	{
@@ -441,6 +448,7 @@ public class SliderControl : MonoBehaviour
 		impactSlider.value = impact / MAX_MT;
 		inputField.text = impact.ToString();
 		Recalc();
+		startHere.SetActive(false);
 		UpdateDissolveObjects();
 		UpdateLeafIcon();
 		
@@ -453,7 +461,7 @@ public class SliderControl : MonoBehaviour
 		
 		impact = Mathf.Round(impactSlider.value * MAX_MT);
 		Recalc();
-
+		startHere.SetActive(false);
 		inputField.text = impact.ToString();
 		UpdateDissolveObjects();
 		UpdateLeafIcon();
