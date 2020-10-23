@@ -82,8 +82,8 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
 	public void OnPointerEnter(PointerEventData pointerEventData)
 	{
-		
-		if(!active) StartCoroutine(FadeIn());
+		if (SliderControl.master.state == SliderControl.State.Intro || SliderControl.master.impactSlider.value == 0) return;
+		if (!active) StartCoroutine(FadeIn());
 		active = true;
 		
 	}
@@ -91,6 +91,7 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	//Detect when Cursor leaves the GameObject
 	public void OnPointerExit(PointerEventData pointerEventData)
 	{
+		if (SliderControl.master.state == SliderControl.State.Intro || SliderControl.master.impactSlider.value == 0) return;
 		if (active) StartCoroutine(FadeOut());
 		active = false;
 	}

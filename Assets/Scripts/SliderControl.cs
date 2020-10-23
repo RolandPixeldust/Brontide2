@@ -316,6 +316,7 @@ public class SliderControl : MonoBehaviour
 	void TurnOffCalculator()
 	{
 		calculatorActive=false;
+		startHere.SetActive(true);
 		foreach (var item in chartObjs)
 			item.transformNull.gameObject.SetActive(false);
 	}
