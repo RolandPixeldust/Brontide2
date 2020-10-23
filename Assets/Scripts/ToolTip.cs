@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ToolTip : MonoBehaviour
+public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
    
 	public float distAwayFromPointer;
@@ -50,7 +51,7 @@ public class ToolTip : MonoBehaviour
 		//this.gameObject.SetActive(false);
 	}
 
-
+/*
 	void Update()
     {
 		if(SliderControl.master.state == SliderControl.State.Intro || SliderControl.master.impactSlider.value==0) return;
@@ -77,6 +78,21 @@ public class ToolTip : MonoBehaviour
 			//cooldown=0;
 		}
 	}
+	*/
 
+	public void OnPointerEnter(PointerEventData pointerEventData)
+	{
+		
+		if(!active) StartCoroutine(FadeIn());
+		active = true;
+		
+	}
+
+	//Detect when Cursor leaves the GameObject
+	public void OnPointerExit(PointerEventData pointerEventData)
+	{
+		if (active) StartCoroutine(FadeOut());
+		active = false;
+	}
 
 }
