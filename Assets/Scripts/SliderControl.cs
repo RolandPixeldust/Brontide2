@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using System.Linq;
 
+
 public class SliderControl : MonoBehaviour
 {
 
@@ -119,6 +120,7 @@ public class SliderControl : MonoBehaviour
 	[FoldoutGroup("Objects")] public float popInDur=1;
 	[FoldoutGroup("Objects")] public AnimationCurve popOutCurve;
 	[FoldoutGroup("Objects")] public float popOutDur = 1;
+	
 	
 
 	void Awake()
@@ -451,7 +453,7 @@ public class SliderControl : MonoBehaviour
 		Recalc();
 		startHere.SetActive(false);
 		UpdateDissolveObjects();
-		UpdateLeafIcon();
+		//UpdateLeafIcon();
 		
 		if(impact<=0) TurnOffCalculator();
 		else if (!calculatorActive) FlowChart();
@@ -465,7 +467,7 @@ public class SliderControl : MonoBehaviour
 		startHere.SetActive(false);
 		inputField.text = impact.ToString();
 		UpdateDissolveObjects();
-		UpdateLeafIcon();
+		//UpdateLeafIcon();
 		if (impact <= 0) TurnOffCalculator();
 		else if (!calculatorActive) FlowChart();
 	}
@@ -560,13 +562,14 @@ public class SliderControl : MonoBehaviour
 		numberObjs[index].transformNull.localScale = numberObjs[index].restScale;
 	}
 
+	/*
 	void UpdateLeafIcon()
 	{
 		var col = leafIcon.color;
 		col.a = impactSlider.value;
 		leafIcon.color=col;
 	}
-
+	*/
 
 	void CameraParallax()
 	{

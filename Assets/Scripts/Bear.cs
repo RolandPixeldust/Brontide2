@@ -30,11 +30,11 @@ public class Bear : MonoBehaviour
 	{
 		if(anim)
 		{
-		startScale = transform.localScale;
-		transform.localScale = startScale * .7f;
-		anim.SetBool("Idle", false);
-		anim.Play(walkId);
-		anim.speed=Random.Range(.24f,.4f);
+			startScale = transform.localScale;
+			transform.localScale = startScale * .7f;
+			anim.SetBool("Idle", false);
+			anim.Play(walkId);
+			anim.speed=Random.Range(.24f,.4f);
 		}
 	}
 	public void Restart()

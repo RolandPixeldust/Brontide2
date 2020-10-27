@@ -1,0 +1,596 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 2e4ad1de157b8e54c8b2328a93222a27
+  m_SerializeEntries:
+  - m_GUID: 00e28b0c824cabc49b52efe7e6603a29
+    m_Address: Assets/Sprites/vectorleaf.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0168309f05dc48048944e2c3ccbb016e
+    m_Address: Assets/Sprites/InputBox.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 065ed9a89b3831141a3b3d47b4fd3c4b
+    m_Address: Assets/Sprites/Vector Smart Object copy.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0d3b6db11ebe3f1409c23c13f6286950
+    m_Address: Assets/Sprites/Car.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1102fc53efada984a9cbc9a5e7c75b13
+    m_Address: Assets/Sprites/Forma 1 copy 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1377bb7cce268d947bb2cfbf5ed636ef
+    m_Address: Assets/Sprites/leaficon.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1437165dd8a2c5d4ca52f0a717e92257
+    m_Address: Assets/Sprites/Cars Driven for 1 Year.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 14e054cd5b5962240baf516d9f9fb50a
+    m_Address: Assets/Sprites/Edge Elements Left.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1a12eceb82efbc843b5616260199353b
+    m_Address: Assets/Sprites/For EveryShort.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1eda5800cac7fe54eb350893c771c44f
+    m_Address: Assets/Sprites/002-sedan.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2375df2e03e0fed4cb47544e99ce95a5
+    m_Address: Assets/Sprites/For Every        replacing petroleum-derived Butylene
+      glycol .png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 279503a2170877b4f8e794e9206520ac
+    m_Address: Assets/Sprites/Edge Elements Right Bottom.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 29ee77fa144eca64db84a32054822943
+    m_Address: Assets/Sprites/ToolTip 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2c7925f569febe4439c5846ffca64e98
+    m_Address: Assets/Sprites/Shape 1 copy 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2e55151a0032b684385c2a56b78ad88d
+    m_Address: Assets/Sprites/LeavesTopUpperRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2ea893ba78d7f5540bd8278875c69664
+    m_Address: Assets/Sprites/LeavesLeftCenter.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 30daa7508ebe7d5499c94e6472df7a05
+    m_Address: Assets/Sprites/BearWalk.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 31025ecc2db486c469a478a682839af8
+    m_Address: Assets/Sprites/Real Leaf 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 359fc4bf8be367a4f8f376db137939a3
+    m_Address: Assets/Sprites/beeC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3709ea3a1a4c34c4ab47b6f120f1223e
+    m_Address: Assets/Sprites/beeD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 37eb8e9a9c90b234f90496c7e9fc517e
+    m_Address: Assets/Sprites/Carbon Sequestered by.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 39537af0432e3b64c86c6b9199478a53
+    m_Address: Assets/Sprites/Tree Seedlings Grown for 10 Years.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3c24c4f0283fc744b8b8948ed3847cc8
+    m_Address: Assets/Sprites/Layer 34.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3d0c49dcac1b7fa4988d617576ee21aa
+    m_Address: Assets/Sprites/Hay Bales B.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3d6d2a0d214b90947981c91edc6de1c2
+    m_Address: Assets/Sprites/Emissions Avoided by.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3e122a2efb58d3042b5805ecfbb80809
+    m_Address: Assets/Sprites/beeB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3f5d61e4b5bf13c43a82d28f24b04a39
+    m_Address: Assets/Sprites/Shape 1 copy 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 479ea0472ed8fbe4abc679516fc3ed0f
+    m_Address: Assets/Sprites/Vector Smart Object-1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 48a691b60ed82174190fbd70a4361759
+    m_Address: Assets/Sprites/Rectangle 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4a6a185dec12ca74f8cb0722dfa64e48
+    m_Address: Assets/Sprites/ExtendedForegroundRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4aae04b3c8c00084f8522c0dd031eaa1
+    m_Address: Assets/Sprites/Mountains.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4b725234619a97548a95111292ff9ebe
+    m_Address: Assets/Sprites/CloudB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4e62c23a1074aa04aaa9c6be9744168c
+    m_Address: Assets/Sprites/BackTrees.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 53c5185f12633fb439438bf00357991d
+    m_Address: Assets/Sprites/Greenhouse Gas Emissions from .png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5718e157a1ed05b4cb2f8eee01edaf0f
+    m_Address: Assets/Sprites/CloudC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5d7658b4e76c96e419045a192f7f049d
+    m_Address: Assets/Sprites/Dash.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5d7f4c218b672f74fbf98ae9cb91aefd
+    m_Address: Assets/Sprites/CO2 Eq..png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 675277e31df73db4582786dda5ce9fac
+    m_Address: Assets/Sprites/beeE.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 68c1ade60613a2d4caa11c987e9bbd16
+    m_Address: Assets/Sprites/MountainsBare.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6bb19de0f1f6b354db2cb381219ef13f
+    m_Address: Assets/Sprites/Bear.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6bced7ea29a422245b10c0e4a0c2a54c
+    m_Address: Assets/Sprites/Edge Elements Bottom.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 718ccc33424acc143b4ecbecc45c5c4b
+    m_Address: Assets/Sprites/Vector Smart Object copy 4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7b2e5239dd1734045a3fb89d56521f72
+    m_Address: Assets/Sprites/What is this equivalent to_.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7f7fdbc6b06b0c6468d2d726699ba450
+    m_Address: Assets/Sprites/Rectangle 1sm.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7fbd9b76d47399d489676ffdd8550971
+    m_Address: Assets/Sprites/Left Cornflower Small.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8318ba92c6ba6254a9d015811d6ac4ca
+    m_Address: Assets/Sprites/Hay Bales A.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8416ce4cf8317fb40a04a20d12fc850b
+    m_Address: Assets/Sprites/Extra Trees.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 846922b35eb641f42968a08bd129a177
+    m_Address: Assets/Sprites/Honeycomb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 851b83e075df51b478aee8fae56d0ea4
+    m_Address: Assets/Sprites/brontide-logo 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8a1eea0c839383746bece7d834e25974
+    m_Address: Assets/Sprites/Slider Handle Logo.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8bb8bed0565066044b434573fed1209a
+    m_Address: Assets/Sprites/Hot Air Balloon.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8f55637842fbf4a44b43a18930cbf118
+    m_Address: Assets/Sprites/greenhouse gases reduced.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 91c84d36b4f567c42a92b4afd6606785
+    m_Address: Assets/Sprites/Hill Lines.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 937e6899da692c242a99f96b53ed1464
+    m_Address: Assets/Sprites/Vector Smart Object copy 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9406c60ac74ac374b815886259d18679
+    m_Address: Assets/Sprites/Hay Bales C.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9550f26958643e94d800ec29cd3386d2
+    m_Address: Assets/Sprites/Ground.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 95879cde38cc1f740a0bc73469bcf2ed
+    m_Address: Assets/Sprites/START HEREClear.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 96e556c956bd0e44eb759bf7fc20ffbc
+    m_Address: Assets/Sprites/white gradient.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9777a8f6afe07ce49b7f472f0608df58
+    m_Address: Assets/Sprites/CloudA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9edaa70a2561dfa4eb7a5a5b3e5a1b11
+    m_Address: Assets/Sprites/Little Tree.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a29879ee8002a6b42b654db7cc48c3ed
+    m_Address: Assets/Sprites/Vector Smart Object copy 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a2daa53c781c6be47825e1ed6870e588
+    m_Address: Assets/Sprites/SkyGradient.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a7a54384560a4784395d19113235ce87
+    m_Address: Assets/Sprites/Layer 35.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a968a79dfab44624b96cac23668ff97d
+    m_Address: Assets/Sprites/Gradient.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ae53ed814160f53479e0cac74140bc82
+    m_Address: Assets/Sprites/Skinny Tree.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: af30195289d49ef40a11a4aa267599b0
+    m_Address: Assets/Sprites/beeA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: af707b10f803d4f44a03eed554f7ed03
+    m_Address: Assets/Sprites/ToolTip 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: aff2e3d210eb5ba41b7e5b7e1e42c4ad
+    m_Address: Assets/Sprites/BearWalkNew.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b007b61d923f9be4f87263635b6f92fd
+    m_Address: Assets/Sprites/Bees.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b58f11ec206803d4a9b78894782a7b71
+    m_Address: Assets/Sprites/LeavesLeftLower.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b5d6d50d67b25c04fa5e8c51becc318a
+    m_Address: Assets/Sprites/TopLeftLeaves.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b6873e2ee569fd04a8a4ebb4abc3d7ca
+    m_Address: Assets/Sprites/Left Cornflower.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b77f7e717c0fb8d4dbaf755098edc444
+    m_Address: Assets/Sprites/lightbulbicon.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bd38f5c39c6697f4097e51c5deb27e55
+    m_Address: Assets/Sprites/LEARN MORE.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bdc790265ee8be2449bd4dfeb847e216
+    m_Address: Assets/Sprites/Hay Bales.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: be0ba01bcc62a304e933b0661549cdec
+    m_Address: Assets/Sprites/WhiteBg.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bf7a478a00ace8e4190bcd55e436ea86
+    m_Address: Assets/Sprites/Incandescent Lamps Switched to LEDs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c171ae312b92c464e98a931fb0a30f5c
+    m_Address: Assets/Sprites/brontide-logo.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c20a2692e749e484e81d8f52bcdf3834
+    m_Address: Assets/Sprites/Right Cornflower copy.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c362574686fc97547ae19a234d5b5fed
+    m_Address: Assets/Sprites/Real Leaf 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cb80e3575f5e84a48b215bd314cd2a89
+    m_Address: Assets/Sprites/Fence.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cf5aa0e8a7080d144be4cae3990944c3
+    m_Address: Assets/Sprites/Hexagons.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cf712f5d8737b5844be04e4502a0bb08
+    m_Address: Assets/Sprites/ExtendedForegroundLeft.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d204ef72bf9006a4ab6fc1fc9e33d3b2
+    m_Address: Assets/Sprites/START HERE.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d569081c744a1a04abdcec3d0ba011c9
+    m_Address: Assets/Sprites/Measure your impact.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d6b3aea37054b0542b8d7cae252a5739
+    m_Address: Assets/Sprites/For Every.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d6e1a29c1c4f42b4d8ca511bde844cd5
+    m_Address: Assets/Sprites/Layer 53.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d886ff058f694e149b13bb4f1d18886c
+    m_Address: Assets/Sprites/BearIdle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e0eb2f576bc446c4db82974839f1be2e
+    m_Address: Assets/Sprites/Vector Smart Object.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e41a43fa4e2c8824e9305358a3ae073e
+    m_Address: Assets/Sprites/Sun.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f50bb537c5933904a81b7559a426ea1e
+    m_Address: Assets/Sprites/LeftMountainLines.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f601527cc09859a4b91d0da16a29c978
+    m_Address: Assets/Sprites/Ellipse 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f89ebfe14c7ea7547ac049b229667509
+    m_Address: Assets/Sprites/Replacing.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f9f032aa6c1d73f4591479a1488e9a00
+    m_Address: Assets/Sprites/Edge Elements Right Top.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fa9908fde5337fe4d805a2c6e0d4eaac
+    m_Address: Assets/Sprites/Edge Elements Right.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 047947122c6e4fe42a6ec20316fb83d5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9d873b9c6337970418f6b9c22070446c, type: 2}
+    - {fileID: 11400000, guid: 52a58a31165a9784a921efd484e43cd9, type: 2}

@@ -51,7 +51,7 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 		//this.gameObject.SetActive(false);
 	}
 
-/*
+	/*
 	void Update()
     {
 		if(SliderControl.master.state == SliderControl.State.Intro || SliderControl.master.impactSlider.value==0) return;
