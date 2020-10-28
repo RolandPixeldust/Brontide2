@@ -23,6 +23,8 @@ public class SliderControl : MonoBehaviour
 	[FoldoutGroup("Calculator")] public float carbonSequestered;
 	[FoldoutGroup("Calculator")] public Text carbonSequesteredText;
 	[FoldoutGroup("Calculator")] public NumberObj [] numberObjs;
+	[FoldoutGroup("Calculator")] public AnimationCurve LogCurve;
+	[FoldoutGroup("Calculator")] public AnimationCurve InvertLogCurve;
 
 	[System.Serializable]
 	public struct NumberObj
@@ -163,7 +165,32 @@ public class SliderControl : MonoBehaviour
 
 		lastInputFieldValue = inputField.text;
 		lastSliderValue = impactSlider.value;
+
 		
+
+	}
+
+	[Button]
+	void InvertTheLogCurve()
+	{
+		for (int i = 0; i < InvertLogCurve.length; i++)
+		{
+			InvertLogCurve.RemoveKey(i);
+		}
+		AnimationCurve c= new AnimationCurve();
+
+		for (float i = 0; i < 32; i++)
+		{
+			c.AddKey((i/32),LogCurve.Evaluate(i/32) );
+		}
+
+		for (int i = 0; i < c.keys.Length; i++)
+		{
+			Keyframe inverseKey = new Keyframe(c.keys[i].value, c.keys[i].time);
+			InvertLogCurve.AddKey(inverseKey);
+			UnityEditor.AnimationUtility.SetKeyLeftTangentMode(InvertLogCurve,i, UnityEditor.AnimationUtility.TangentMode.Linear);
+			UnityEditor.AnimationUtility.SetKeyRightTangentMode(InvertLogCurve, i, UnityEditor.AnimationUtility.TangentMode.Linear);
+		}
 	}
 
 	private void Start()
@@ -337,9 +364,21 @@ public class SliderControl : MonoBehaviour
 	void TurnOffCalculator()
 	{
 		calculatorActive=false;
+		if(!startHere.activeInHierarchy) StartCoroutine(PopObj(startHere.transform,.385f,.5f));
 		startHere.SetActive(true);
 		foreach (var item in chartObjs)
 			item.transformNull.gameObject.SetActive(false);
+	}
+
+	IEnumerator PopObj(Transform t, float initScale, float dur)
+	{
+		
+		for (float lerp = 0; lerp < 1; lerp+=Time.deltaTime/dur)
+		{
+			t.localScale = Vector3.one*initScale * popInCurve.Evaluate(lerp);
+			yield return null;
+		}
+		t.localScale = Vector3.one* initScale;
 	}
 
 	void ShowObjects()
@@ -456,7 +495,7 @@ public class SliderControl : MonoBehaviour
 		if(lastSliderValue != impactSlider.value)
 			UpdateInputField();
 
-		if(lastInputFieldValue != inputField.text)
+		if(lastInputFieldValue != inputField.text && InputFieldObj.master.selected && inputField.text!="")
 			UpdateSlider();
 
 		lastInputFieldValue = inputField.text;
@@ -465,9 +504,10 @@ public class SliderControl : MonoBehaviour
 
 	void UpdateSlider()
 	{
+	
 		impact = float.Parse(inputField.text);
 		impact = Mathf.Round(Mathf.Clamp(impact, 0, MAX_MT));
-		impactSlider.value = impact / MAX_MT;
+		impactSlider.value = InvertLogCurve.Evaluate(impact / MAX_MT);
 		inputField.text = impact.ToString();
 		Recalc();
 		startHere.SetActive(false);
@@ -481,7 +521,7 @@ public class SliderControl : MonoBehaviour
 	void UpdateInputField()
 	{
 		
-		impact = Mathf.Round(impactSlider.value * MAX_MT);
+		impact = Mathf.Round(LogCurve.Evaluate(impactSlider.value) * MAX_MT);
 		Recalc();
 		startHere.SetActive(false);
 		inputField.text = impact.ToString();

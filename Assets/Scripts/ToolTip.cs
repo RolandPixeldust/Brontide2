@@ -14,6 +14,7 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	public bool active;
 	public CanvasGroup canvasGroup;
 	public float fadeDur=1;
+	public Image linkWindow;
 
 	private void Awake()
 	{
@@ -31,6 +32,8 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	IEnumerator FadeIn()
 	{
 		active = true;
+		if(linkWindow)
+			linkWindow.raycastTarget =true;
 		for (float lerp = 0; lerp < 1; lerp += Time.deltaTime / fadeDur)
 		{
 			canvasGroup.alpha = lerp;
@@ -42,6 +45,8 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	IEnumerator FadeOut()
 	{
 		active=false;
+		if (linkWindow)
+			linkWindow.raycastTarget = false;
 		for (float lerp = 0; lerp < 1; lerp += Time.deltaTime / fadeDur)
 		{
 			canvasGroup.alpha = 1 - lerp;

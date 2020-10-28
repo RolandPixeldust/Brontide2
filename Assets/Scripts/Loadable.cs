@@ -3,8 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-
-
+using Sirenix.OdinInspector;
 
 public class Loadable : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class Loadable : MonoBehaviour
 	public Sprite sprite;
 	public AssetReferenceSprite spriteRef;
 
+	
 	private void OnValidate()
 	{
 		if(!image) image = GetComponent<Image>();
@@ -24,10 +24,10 @@ public class Loadable : MonoBehaviour
 	{
 		if (!image) image = GetComponent<Image>();
 		if (!spriteRenderer) spriteRenderer = GetComponent<SpriteRenderer>();
-
 		LoadSprite();
 	}
 
+	
 
 	private void OnEnable()
 	{
