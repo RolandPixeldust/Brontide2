@@ -38,7 +38,8 @@ public class Loadable : MonoBehaviour
 	{
 		if (sprite)
 		{
-			image.sprite = sprite;
+		 	if(image) image.sprite = sprite;
+			if (spriteRenderer) spriteRenderer.sprite = sprite;
 		}
 		else
 		{

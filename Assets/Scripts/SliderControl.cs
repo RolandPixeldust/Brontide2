@@ -121,7 +121,16 @@ public class SliderControl : MonoBehaviour
 	[FoldoutGroup("Objects")] public AnimationCurve popOutCurve;
 	[FoldoutGroup("Objects")] public float popOutDur = 1;
 	
-	
+	[Button(ButtonSizes.Large)]
+	void ClearSprites()
+	{
+		var loadables = FindObjectsOfType<Loadable>();
+		foreach (var item in loadables)
+		{
+			if (item.image!=null) item.image.sprite=null;
+			if(item.spriteRenderer!=null) item.spriteRenderer.sprite=null;
+		}
+	}
 
 	void Awake()
     {
