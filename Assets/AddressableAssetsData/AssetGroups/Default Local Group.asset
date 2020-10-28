@@ -21,8 +21,8 @@ MonoBehaviour:
     m_Address: Assets/Sprites/vectorleaf.png
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 00e28b0c824cabc49b52efe7e6603a29, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 00e28b0c824cabc49b52efe7e6603a29, type: 3}
   - m_GUID: 0168309f05dc48048944e2c3ccbb016e
     m_Address: Assets/Sprites/InputBox.png
     m_ReadOnly: 0
@@ -422,12 +422,6 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: aff2e3d210eb5ba41b7e5b7e1e42c4ad
     m_Address: Assets/Sprites/BearWalkNew.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: b007b61d923f9be4f87263635b6f92fd
-    m_Address: Assets/Sprites/Bees.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}

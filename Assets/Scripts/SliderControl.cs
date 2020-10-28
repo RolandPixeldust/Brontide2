@@ -132,6 +132,16 @@ public class SliderControl : MonoBehaviour
 		}
 	}
 
+	[Button(ButtonSizes.Large)]
+	void LoadSprites()
+	{
+		var loadables = FindObjectsOfType<Loadable>();
+		foreach (var item in loadables)
+		{
+			item.LoadSprite();
+		}
+	}
+
 	void Awake()
     {
 		//Screen.SetResolution(

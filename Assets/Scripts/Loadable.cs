@@ -34,7 +34,7 @@ public class Loadable : MonoBehaviour
 		LoadSprite();
 	}
 
-	void LoadSprite()
+	public void LoadSprite()
 	{
 		if (sprite)
 		{
