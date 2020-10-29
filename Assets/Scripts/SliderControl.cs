@@ -283,6 +283,7 @@ public class SliderControl : MonoBehaviour
 		}
 		chartObjs[index].canvasGroup.alpha =1;
 		chartObjs[index].transformNull.localScale = chartObjs[index].restScale;
+		if(!calculatorActive) chartObjs[index].transformNull.gameObject.SetActive(false);
 	}
  
     void Update()
@@ -366,6 +367,7 @@ public class SliderControl : MonoBehaviour
 		calculatorActive=false;
 		if(!startHere.activeInHierarchy) StartCoroutine(PopObj(startHere.transform,.385f,.5f));
 		startHere.SetActive(true);
+
 		foreach (var item in chartObjs)
 			item.transformNull.gameObject.SetActive(false);
 	}
@@ -514,8 +516,14 @@ public class SliderControl : MonoBehaviour
 		UpdateDissolveObjects();
 		//UpdateLeafIcon();
 		
-		if(impact<=0) TurnOffCalculator();
-		else if (!calculatorActive) FlowChart();
+		if(impact<=0) 
+		{
+			TurnOffCalculator();
+		}
+		else if (!calculatorActive)
+		{
+			FlowChart();
+		}
 	}
 
 	void UpdateInputField()
@@ -527,8 +535,14 @@ public class SliderControl : MonoBehaviour
 		inputField.text = impact.ToString();
 		UpdateDissolveObjects();
 		//UpdateLeafIcon();
-		if (impact <= 0) TurnOffCalculator();
-		else if (!calculatorActive) FlowChart();
+		if (impact <= 0)
+		{
+			TurnOffCalculator();
+		}
+		else if (!calculatorActive) 
+		{
+			FlowChart();
+		}
 	}
 
 	void Recalc()

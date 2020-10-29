@@ -13,7 +13,7 @@ public class Loadable : MonoBehaviour
 	public Sprite sprite;
 	public AssetReferenceSprite spriteRef;
 
-	
+
 	private void OnValidate()
 	{
 		if(!image) image = GetComponent<Image>();
