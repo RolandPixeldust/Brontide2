@@ -122,6 +122,7 @@ public class SliderControl : MonoBehaviour
 	[FoldoutGroup("Objects")] public float popInDur=1;
 	[FoldoutGroup("Objects")] public AnimationCurve popOutCurve;
 	[FoldoutGroup("Objects")] public float popOutDur = 1;
+	[FoldoutGroup("Objects")] public string	fadeTag= "_Intensity";
 	
 	[Button(ButtonSizes.Large)]
 	void ClearSprites()
@@ -188,8 +189,6 @@ public class SliderControl : MonoBehaviour
 		{
 			Keyframe inverseKey = new Keyframe(c.keys[i].value, c.keys[i].time);
 			InvertLogCurve.AddKey(inverseKey);
-			UnityEditor.AnimationUtility.SetKeyLeftTangentMode(InvertLogCurve,i, UnityEditor.AnimationUtility.TangentMode.Linear);
-			UnityEditor.AnimationUtility.SetKeyRightTangentMode(InvertLogCurve, i, UnityEditor.AnimationUtility.TangentMode.Linear);
 		}
 	}
 
@@ -387,7 +386,7 @@ public class SliderControl : MonoBehaviour
 	{
 		for (int i = 0; i < dissolveObjs.Length; i++)
 		{
-			dissolveObjs[i].rend.material.SetFloat("_Fade",1);
+			dissolveObjs[i].rend.material.SetFloat(fadeTag,1);
 		}
 	}
 
@@ -396,7 +395,7 @@ public class SliderControl : MonoBehaviour
 	{
 		for (int i = 0; i < dissolveObjs.Length; i++)
 		{
-			dissolveObjs[i].rend.material.SetFloat("_Fade", 0);
+			dissolveObjs[i].rend.material.SetFloat(fadeTag, 0);
 		}
 	}
 
@@ -440,7 +439,7 @@ public class SliderControl : MonoBehaviour
 		for (float	lerp = 0; lerp < 1;lerp+=Time.deltaTime/popInDur )
 		{
 			dissolveObjs[index].obj.transform.localScale = dissolveObjs[index].startScale * popInCurve.Evaluate(lerp);
-			dissolveObjs[index].rend.material.SetFloat("_Fade",lerp);
+			dissolveObjs[index].rend.material.SetFloat(fadeTag, lerp);
 
 			yield return null;
 		}
@@ -452,7 +451,7 @@ public class SliderControl : MonoBehaviour
 	IEnumerator SunRise(int index)
 	{
 		Color col = sky.color;
-		dissolveObjs[index].rend.material.SetFloat("_Fade", 1);
+		dissolveObjs[index].rend.material.SetFloat(fadeTag, 1);
 		for (float lerp = 0; lerp <1; lerp+=Time.deltaTime/sunLerpDur)
 		{
 			dissolveObjs[index].obj.transform.position = Vector3.Lerp(sunStart.position,sunEnd.position,sunRiseCurve.Evaluate(lerp));
@@ -466,7 +465,7 @@ public class SliderControl : MonoBehaviour
 	{
 		var a = Mathf.Clamp01((impactSlider.value - skyScaleRange.x) / (skyScaleRange.y -skyScaleRange.x));
 		skyCol.a= a;
-		sky.material.SetFloat("_Fade", a);
+		sky.material.SetFloat(fadeTag, a);
 		sky.color = skyCol;
 		skyScaleNull.localScale = Vector3.one*(.5f+a/2);
 	}
@@ -478,11 +477,11 @@ public class SliderControl : MonoBehaviour
 		{
 			if(dissolveObjs[index].objType != ObjType.Sun)
 			dissolveObjs[index].obj.transform.localScale = dissolveObjs[index].startScale * popOutCurve.Evaluate(lerp);
-			dissolveObjs[index].rend.material.SetFloat("_Fade", 1-lerp);
+			dissolveObjs[index].rend.material.SetFloat(fadeTag, 1-lerp);
 			yield return null;
 		}
 
-		dissolveObjs[index].rend.material.SetFloat("_Fade", 0);
+		dissolveObjs[index].rend.material.SetFloat(fadeTag, 0);
 		if (dissolveObjs[index].objType == ObjType.Bee)
 		{
 			dissolveObjs[index].obj.transform.GetChild(0).gameObject.SetActive(false);
@@ -497,8 +496,11 @@ public class SliderControl : MonoBehaviour
 		if(lastSliderValue != impactSlider.value)
 			UpdateInputField();
 
+		if(InputFieldObj.master)
+		{
 		if(lastInputFieldValue != inputField.text && InputFieldObj.master.selected && inputField.text!="")
 			UpdateSlider();
+		}
 
 		lastInputFieldValue = inputField.text;
 		lastSliderValue = impactSlider.value;
