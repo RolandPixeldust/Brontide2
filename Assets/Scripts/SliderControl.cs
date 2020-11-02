@@ -124,6 +124,7 @@ public class SliderControl : MonoBehaviour
 	[FoldoutGroup("Objects")] public float popOutDur = 1;
 	[FoldoutGroup("Objects")] public string	fadeTag= "_Intensity";
 	
+	/*
 	[Button(ButtonSizes.Large)]
 	void ClearSprites()
 	{
@@ -144,7 +145,7 @@ public class SliderControl : MonoBehaviour
 			item.LoadSprite();
 		}
 	}
-
+	*/
 	void Awake()
     {
 		//Screen.SetResolution(

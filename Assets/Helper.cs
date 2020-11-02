@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 
 public class Helper : MonoBehaviour
 {
-
+/*
 	[System.Serializable]
 	public struct LoadableAsset
 	{
@@ -82,5 +82,5 @@ public class Helper : MonoBehaviour
 			if (item.spriteRenderer != null) item.spriteRenderer.sprite = null;
 		}
 	}
-
+	*/
 }

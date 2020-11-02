@@ -1,24 +1,19 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using Sirenix.OdinInspector;
+//using UnityEngine.AddressableAssets;
+//using UnityEngine.ResourceManagement.AsyncOperations;
+//using Sirenix.OdinInspector;
 
 public class Loadable : MonoBehaviour
 {
-	
+/*	
 	public SpriteRenderer spriteRenderer;
 	public Image image;
 	public Sprite sprite;
 	public AssetReferenceSprite spriteRef;
 
 
-	private void OnValidate()
-	{
-		if(!image) image = GetComponent<Image>();
-		if(!spriteRenderer) spriteRenderer =GetComponent<SpriteRenderer>();
-	}
 
 	private void Awake()
 	{
@@ -57,5 +52,5 @@ public class Loadable : MonoBehaviour
 			if(spriteRenderer) spriteRenderer.sprite= sprite;
 		}
 	}
-
+	*/
 }
