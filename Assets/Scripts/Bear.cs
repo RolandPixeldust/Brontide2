@@ -17,7 +17,7 @@ public class Bear : MonoBehaviour
 	public enum Type {Linear, Float};
 	public Type type;
 
-	int idleId = Animator.StringToHash("Base Layer.BearIdle");
+	int idleId = Animator.StringToHash("Base Layer.BearStand");
 	int walkId = Animator.StringToHash("Base Layer.BearWalkNew");
 
 	[ShowIf("type", Type.Float)] public float sinPhase;
