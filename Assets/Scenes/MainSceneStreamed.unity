@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6556,7 +6556,7 @@ MonoBehaviour:
     obj: {fileID: 1516903980}
     rend: {fileID: 1516903982}
     dissoveThresh: 648.6486
-    startScale: {x: -0.8424619, y: 0.84246194, z: 0.84246194}
+    startScale: {x: 0.8424619, y: 0.84246194, z: 0.84246194}
     objType: 1
   - name: FG Left (3)
     objState: 0
@@ -6682,7 +6682,7 @@ MonoBehaviour:
     obj: {fileID: 2053627790}
     rend: {fileID: 2053627792}
     dissoveThresh: 1621.6216
-    startScale: {x: -0.6, y: 0.6, z: 0.6}
+    startScale: {x: 0.6, y: 0.6, z: 0.6}
     objType: 1
   - name: CloudC (1)
     objState: 0
@@ -8513,7 +8513,7 @@ Transform:
   m_GameObject: {fileID: 1516903980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.57, y: -3.81, z: 84.29}
-  m_LocalScale: {x: -0.8424619, y: 0.84246194, z: 0.84246194}
+  m_LocalScale: {x: 0.8424619, y: 0.84246194, z: 0.84246194}
   m_Children: []
   m_Father: {fileID: 1902332059}
   m_RootOrder: 14
@@ -11375,7 +11375,7 @@ Transform:
   m_GameObject: {fileID: 2053627790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.31, y: -3.81, z: 83.8}
-  m_LocalScale: {x: -0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1902332059}
   m_RootOrder: 15

@@ -4,10 +4,21 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 
 public class SliderControl : MonoBehaviour
 {
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+	[DllImport("__Internal")]
+	private static extern void ScrollWindow(int x, int y);
+
+	[DllImport("__Internal")]
+	private static extern void ShowMessage(string message);
+#endif
+
+
 
 	public static SliderControl master;
 
@@ -151,8 +162,8 @@ public class SliderControl : MonoBehaviour
 		//Screen.SetResolution(
 		//Screen.currentResolution.width,
 		//Screen.currentResolution.height,false);
-
-		if(SliderControl.master==null)
+		WebGLInput.captureAllKeyboardInput = false;
+		if (SliderControl.master==null)
 		SliderControl.master=this;
 		else
 		Destroy(this.gameObject);
@@ -253,9 +264,18 @@ public class SliderControl : MonoBehaviour
 			camera.position = Vector3.Lerp(cameraStart.position,cameraEnd.position, cameraTruckLerp.Evaluate(lerp));
 			yield return null;
 		}
+
+		string message = "TEST COMPLETE";
+	#if UNITY_WEBGL && !UNITY_EDITOR
+			ScrollWindow(0,400);
+			ShowMessage(message);
+	#endif
+
 		camera.position = cameraEnd.position;
 		state = State.Main;
 	}
+
+
 
 
 	[FoldoutGroup("FlowChart")]
@@ -291,7 +311,7 @@ public class SliderControl : MonoBehaviour
 		UpdateSky();
 		if (state == State.Intro) return;
 		CameraParallax();
-		ImpactInput();		
+		ImpactInput();
 	}
 
 	[FoldoutGroup("FlowChart")]

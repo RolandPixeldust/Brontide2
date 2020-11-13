@@ -82,5 +82,5 @@ public class Helper : MonoBehaviour
 			if (item.spriteRenderer != null) item.spriteRenderer.sprite = null;
 		}
 	}
-	*/
+*/
 }
