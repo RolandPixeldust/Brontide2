@@ -4,12 +4,13 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Globalization;
+//using System.Runtime.InteropServices;
 
 
 public class SliderControl : MonoBehaviour
 {
-
+/*
 #if UNITY_WEBGL && !UNITY_EDITOR
 	[DllImport("__Internal")]
 	private static extern void ScrollWindow(int x, int y);
@@ -18,7 +19,7 @@ public class SliderControl : MonoBehaviour
 	private static extern void ShowMessage(string message);
 #endif
 
-
+*/
 
 	public static SliderControl master;
 
@@ -119,11 +120,10 @@ public class SliderControl : MonoBehaviour
 	public struct DissolveObj
 	{
 		[FoldoutGroup("$name")] public string name;
-	
 		[FoldoutGroup("$name")] public ObjState objState;
 		[FoldoutGroup("$name")] public GameObject obj;
 		[FoldoutGroup("$name")] public Renderer rend;
-		[FoldoutGroup("$name")] [Range(0,MAX_MT)] public float dissoveThresh;
+		[FoldoutGroup("$name")] [Range(0, MAX_MT)] public float dissoveThresh;
 		[FoldoutGroup("$name")] public Vector3 startScale;
 		[FoldoutGroup("$name")] public ObjType objType;
 	}
@@ -162,7 +162,7 @@ public class SliderControl : MonoBehaviour
 		//Screen.SetResolution(
 		//Screen.currentResolution.width,
 		//Screen.currentResolution.height,false);
-		WebGLInput.captureAllKeyboardInput = false;
+		//WebGLInput.captureAllKeyboardInput = false;
 		if (SliderControl.master==null)
 		SliderControl.master=this;
 		else
@@ -264,17 +264,17 @@ public class SliderControl : MonoBehaviour
 			camera.position = Vector3.Lerp(cameraStart.position,cameraEnd.position, cameraTruckLerp.Evaluate(lerp));
 			yield return null;
 		}
-
-		string message = "TEST COMPLETE";
-	#if UNITY_WEBGL && !UNITY_EDITOR
-			ScrollWindow(0,400);
-			ShowMessage(message);
-	#endif
-
+		/*
+			string message = "TEST COMPLETE";
+			#if UNITY_WEBGL && !UNITY_EDITOR
+					ScrollWindow(0,400);
+					ShowMessage(message);
+			#endif
+		*/
 		camera.position = cameraEnd.position;
 		state = State.Main;
 	}
-
+		
 
 
 
@@ -354,6 +354,13 @@ public class SliderControl : MonoBehaviour
 	{
 		#if UNITY_WEBGL
 			Application.ExternalEval("window.open('https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator');");
+		#endif
+	}
+
+	public void GoToPDF()
+	{
+		#if UNITY_WEBGL
+			Application.ExternalEval("window.open('https://www.brontidebg.com/wp-content/uploads/2020/09/SOFW-LCA-Article.pdf');");
 		#endif
 	}
 
@@ -637,10 +644,10 @@ public class SliderControl : MonoBehaviour
 			}
 
 
-			greenHouseGasText.text = curGreenHouseGas.ToString();
-			carbonSequesteredText.text = curCarbonSequestered.ToString();
-			emissionsText.text = curEmission.ToString();
-			lampsText.text = curLamps.ToString();
+			greenHouseGasText.text = curGreenHouseGas.ToString("#,#", CultureInfo.InvariantCulture);
+			carbonSequesteredText.text = curCarbonSequestered.ToString("#,#", CultureInfo.InvariantCulture);
+			emissionsText.text = curEmission.ToString("#,#", CultureInfo.InvariantCulture);
+			lampsText.text = curLamps.ToString("#,#", CultureInfo.InvariantCulture);
 
 			yield return null;
 		}
