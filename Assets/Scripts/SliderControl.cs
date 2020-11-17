@@ -10,16 +10,21 @@ using System.Globalization;
 
 public class SliderControl : MonoBehaviour
 {
-/*
-#if UNITY_WEBGL && !UNITY_EDITOR
+	/*
 	[DllImport("__Internal")]
 	private static extern void ScrollWindow(int x, int y);
 
 	[DllImport("__Internal")]
 	private static extern void ShowMessage(string message);
+*/
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+
+		[DllImport("__Internal")]
+		private static extern void BrontideHome();
 #endif
 
-*/
+
 
 	public static SliderControl master;
 
@@ -55,7 +60,6 @@ public class SliderControl : MonoBehaviour
 
 	[FoldoutGroup("ToolTip")] public GameObject [] toolTip;
 	
-
 	[FoldoutGroup("Pools")] public GameObject dash;
 	[FoldoutGroup("Pools")] public float dashStagger=.25f;
 	[FoldoutGroup("Pools")] public float delay;

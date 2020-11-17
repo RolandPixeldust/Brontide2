@@ -9,4 +9,17 @@ mergeInto(LibraryManager.library, {
      window.location.href = 'http://www.google.com';
   },
 
+
+    BrontideHome: function(){
+     window.location.href = 'http://www.brontidebg.com';
+  },
+
+     EPA: function(){
+     window.location.href = 'http://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator';
+  },
+ 
+
+    PDF: function(){
+     window.location.href = 'http://www.brontidebg.com/wp-content/uploads/2020/09/SOFW-LCA-Article.pdf';
+  },
 });
