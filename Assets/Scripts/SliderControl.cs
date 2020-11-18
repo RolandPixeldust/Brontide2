@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using System.Linq;
 using System.Globalization;
-//using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 
 
 public class SliderControl : MonoBehaviour
@@ -18,11 +18,17 @@ public class SliderControl : MonoBehaviour
 	private static extern void ShowMessage(string message);
 */
 
-#if UNITY_WEBGL && !UNITY_EDITOR
+//#if UNITY_WEBGL && !UNITY_EDITOR
 
 		[DllImport("__Internal")]
 		private static extern void BrontideHome();
-#endif
+
+	[DllImport("__Internal")]
+	private static extern void EPA();
+
+	[DllImport("__Internal")]
+	private static extern void PDF();
+	//#endif
 
 
 
@@ -352,6 +358,21 @@ public class SliderControl : MonoBehaviour
 		}
 
 		dissolveObjs = dissolveObjs.OrderBy(x => x.dissoveThresh).ToArray();
+	}
+
+	public void BrontideHomeJScript()
+	{
+		BrontideHome();
+	}
+
+	public void EPAJScript()
+	{
+		EPA();
+	}
+
+	public void PDFJScript()
+	{
+		PDF();
 	}
 
 	public void GoToSite()
