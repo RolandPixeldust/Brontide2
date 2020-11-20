@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 1d240d47cdac4e24d8886d71b9d4a7de
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Helvetica Condensed Light
+  fontNames:
+  - Helvetica Condensed Light
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 226df923cd96e1a4ba193dc91b8b1484, type: 3}
+  - {fileID: 12800000, guid: 43a7ea8406700854ea1b90986b9c61d8, type: 3}
+  - {fileID: 12800000, guid: c39c0bad0afe0e147893265cc38039af, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -22,4 +22,8 @@ mergeInto(LibraryManager.library, {
     PDF: function(){
      window.location.href = 'http://www.brontidebg.com/wp-content/uploads/2020/09/SOFW-LCA-Article.pdf';
   },
+
+    Sample: function(){
+     window.location.href = 'http://www.brontidebg.com/request-sample';
+  },
 });

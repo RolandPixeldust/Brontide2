@@ -28,6 +28,9 @@ public class SliderControl : MonoBehaviour
 
 	[DllImport("__Internal")]
 	private static extern void PDF();
+
+	[DllImport("__Internal")]
+	private static extern void Sample();
 	//#endif
 
 
@@ -184,7 +187,10 @@ public class SliderControl : MonoBehaviour
 		TruckCamera();
 
 		foreach (var item in chartObjs)
+		{
+			if(item.transformNull!=null)
 			item.transformNull.gameObject.SetActive(false);
+		}
 
 		lastInputFieldValue = inputField.text;
 		lastSliderValue = impactSlider.value;
@@ -294,7 +300,10 @@ public class SliderControl : MonoBehaviour
 	{
 		calculatorActive=true;
 		foreach (var item in chartObjs)
+		{
+			if(item.transformNull!=null)
 			item.transformNull.gameObject.SetActive(false);
+		}
 		for (int i = 0; i < chartObjs.Length; i++)
 		{
 			StartCoroutine(_FlowChart(i));
@@ -358,6 +367,11 @@ public class SliderControl : MonoBehaviour
 		}
 
 		dissolveObjs = dissolveObjs.OrderBy(x => x.dissoveThresh).ToArray();
+	}
+
+	public void SampleJScript()
+	{
+		Sample();
 	}
 
 	public void BrontideHomeJScript()
