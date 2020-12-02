@@ -16,12 +16,12 @@ public class SliderControl : MonoBehaviour
 
 	[DllImport("__Internal")]
 	private static extern void ShowMessage(string message);
-*/
+	*/
 
-//#if UNITY_WEBGL && !UNITY_EDITOR
+	//#if UNITY_WEBGL && !UNITY_EDITOR
 
-		[DllImport("__Internal")]
-		private static extern void BrontideHome();
+	[DllImport("__Internal")]
+	private static extern void BrontideHome();
 
 	[DllImport("__Internal")]
 	private static extern void EPA();
@@ -42,12 +42,20 @@ public class SliderControl : MonoBehaviour
 
 	[FoldoutGroup("Calculator")] public float greenHouseGas;
 	[FoldoutGroup("Calculator")] public Text greenHouseGasText;
+	[FoldoutGroup("Calculator")] public DIGITS greenHouseGasDigits;
+	[Space]
 	[FoldoutGroup("Calculator")] public float emission;
 	[FoldoutGroup("Calculator")] public Text emissionsText;
+	[FoldoutGroup("Calculator")] public DIGITS emissionsDigits;
+	[Space]
 	[FoldoutGroup("Calculator")] public float lamps;
 	[FoldoutGroup("Calculator")] public Text lampsText;
+	[FoldoutGroup("Calculator")] public DIGITS lampsDigits;
+	[Space]
 	[FoldoutGroup("Calculator")] public float carbonSequestered;
 	[FoldoutGroup("Calculator")] public Text carbonSequesteredText;
+	[FoldoutGroup("Calculator")] public DIGITS carbonSequesteredDigits;
+	[Space]
 	[FoldoutGroup("Calculator")] public NumberObj [] numberObjs;
 	[FoldoutGroup("Calculator")] public AnimationCurve LogCurve;
 	[FoldoutGroup("Calculator")] public AnimationCurve InvertLogCurve;
@@ -170,12 +178,16 @@ public class SliderControl : MonoBehaviour
 		}
 	}
 	*/
+
 	void Awake()
     {
 		//Screen.SetResolution(
 		//Screen.currentResolution.width,
 		//Screen.currentResolution.height,false);
 		//WebGLInput.captureAllKeyboardInput = false;
+
+		Screen.fullScreen= true;
+		Screen.orientation = ScreenOrientation.Portrait;
 		if (SliderControl.master==null)
 		SliderControl.master=this;
 		else
@@ -194,8 +206,6 @@ public class SliderControl : MonoBehaviour
 
 		lastInputFieldValue = inputField.text;
 		lastSliderValue = impactSlider.value;
-
-		
 
 	}
 
@@ -604,6 +614,7 @@ public class SliderControl : MonoBehaviour
 		inputField.text = impact.ToString();
 		UpdateDissolveObjects();
 		//UpdateLeafIcon();
+
 		if (impact <= 0)
 		{
 			TurnOffCalculator();
@@ -614,12 +625,13 @@ public class SliderControl : MonoBehaviour
 		}
 	}
 
+	
 	void Recalc()
-	{
-		greenHouseGas = Mathf.Round(impactSlider.value * MAX_MT * 1.92f);
-		carbonSequestered = Mathf.Round(impactSlider.value * MAX_MT * 1.92f * 16.534f);
-		emission = Mathf.Round(impactSlider.value * MAX_MT * 1.92f * .21599f);
-		lamps = Mathf.Round(impactSlider.value * MAX_MT * 1.92f * 37.9899126f);
+	{	
+		greenHouseGas = Mathf.Round(impact * 1.92f);
+		emission = Mathf.Round(impact * 0.4147008f);// 1.92f * .21599f);
+		lamps = Mathf.Round(impact * 72.94063219f);//1.92f * 37.9899126f);
+		carbonSequestered = Mathf.Round(impact * 31.74528f);//1.92f * 16.534f);
 	}
 
 	IEnumerator Counters()
@@ -683,10 +695,17 @@ public class SliderControl : MonoBehaviour
 			}
 
 
-			greenHouseGasText.text = curGreenHouseGas.ToString("#,#", CultureInfo.InvariantCulture);
-			carbonSequesteredText.text = curCarbonSequestered.ToString("#,#", CultureInfo.InvariantCulture);
-			emissionsText.text = curEmission.ToString("#,#", CultureInfo.InvariantCulture);
-			lampsText.text = curLamps.ToString("#,#", CultureInfo.InvariantCulture);
+			//greenHouseGasText.text = curGreenHouseGas.ToString("#,#", CultureInfo.InvariantCulture);
+			greenHouseGasDigits.source = curGreenHouseGas.ToString("#,#", CultureInfo.InvariantCulture) +"MT";
+
+			//carbonSequesteredText.text = curCarbonSequestered.ToString("#,#", CultureInfo.InvariantCulture);
+			carbonSequesteredDigits.source = curCarbonSequestered.ToString("#,#", CultureInfo.InvariantCulture);//carbonSequesteredText.text;
+
+			//emissionsText.text = curEmission.ToString("#,#", CultureInfo.InvariantCulture);
+			emissionsDigits.source = curEmission.ToString("#,#", CultureInfo.InvariantCulture);// emissionsText.text;
+
+			//lampsText.text = curLamps.ToString("#,#", CultureInfo.InvariantCulture);
+			lampsDigits.source = curLamps.ToString("#,#", CultureInfo.InvariantCulture);// lampsText.text;
 
 			yield return null;
 		}
