@@ -186,7 +186,7 @@ public class SliderControl : MonoBehaviour
 		//Screen.currentResolution.height,false);
 		//WebGLInput.captureAllKeyboardInput = false;
 
-		Screen.fullScreen= true;
+		//Screen.fullScreen= true;
 		Screen.orientation = ScreenOrientation.Portrait;
 		if (SliderControl.master==null)
 		SliderControl.master=this;

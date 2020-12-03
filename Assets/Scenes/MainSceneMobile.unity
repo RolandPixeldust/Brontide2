@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1837,14 +1837,14 @@ RectTransform:
   m_GameObject: {fileID: 273581739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.62188}
-  m_LocalScale: {x: 0.59319633, y: 0.59319633, z: 0.59319633}
+  m_LocalScale: {x: 0.449385, y: 0.449385, z: 0.449385}
   m_Children: []
   m_Father: {fileID: 1896120657}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9, y: 21.27}
+  m_AnchoredPosition: {x: 0.2, y: 22.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273581741
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53c5185f12633fb439438bf00357991d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 548147b395d7be74f905e3c6a9d16d20, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3756,7 +3756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00018310547, y: 0}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0}
   m_SizeDelta: {x: 811.73047, y: 298.0368}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &498351551
@@ -5787,12 +5787,16 @@ MonoBehaviour:
   state: 0
   greenHouseGas: 0
   greenHouseGasText: {fileID: 345185432}
+  greenHouseGasDigits: {fileID: 0}
   emission: 0
   emissionsText: {fileID: 101926536}
+  emissionsDigits: {fileID: 0}
   lamps: 0
   lampsText: {fileID: 1914526341}
+  lampsDigits: {fileID: 0}
   carbonSequestered: 0
   carbonSequesteredText: {fileID: 43113380}
+  carbonSequesteredDigits: {fileID: 0}
   numberObjs:
   - restScale: {x: 0.8861104, y: 0.8861106, z: 0.8861106}
     transformNull: {fileID: 345185433}
