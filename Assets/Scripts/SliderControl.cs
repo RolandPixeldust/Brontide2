@@ -20,6 +20,9 @@ public class SliderControl : MonoBehaviour
 
 	//#if UNITY_WEBGL && !UNITY_EDITOR
 
+	public enum FormFactor { Desktop, Mobile };
+	public FormFactor formFactor;
+
 	[DllImport("__Internal")]
 	private static extern void BrontideHome();
 
@@ -186,8 +189,6 @@ public class SliderControl : MonoBehaviour
 		//Screen.currentResolution.height,false);
 		//WebGLInput.captureAllKeyboardInput = false;
 
-		//Screen.fullScreen= true;
-		Screen.orientation = ScreenOrientation.Portrait;
 		if (SliderControl.master==null)
 		SliderControl.master=this;
 		else
@@ -337,6 +338,13 @@ public class SliderControl : MonoBehaviour
  
     void Update()
     {
+
+		if (formFactor == FormFactor.Mobile)
+		{
+			Screen.fullScreen = true;
+			Screen.orientation = ScreenOrientation.Portrait;
+		}
+
 		UpdateSky();
 		if (state == State.Intro) return;
 		CameraParallax();
@@ -441,7 +449,7 @@ public class SliderControl : MonoBehaviour
 	void TurnOffCalculator()
 	{
 		calculatorActive=false;
-		if(!startHere.activeInHierarchy) StartCoroutine(PopObj(startHere.transform,.385f,.5f));
+		if(!startHere.activeInHierarchy) StartCoroutine(PopObj(startHere.transform, formFactor == FormFactor.Desktop? .385f:1,.5f));
 		startHere.SetActive(true);
 
 		foreach (var item in chartObjs)
