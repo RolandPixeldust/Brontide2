@@ -20,7 +20,7 @@ public class SliderControl : MonoBehaviour
 
 	//#if UNITY_WEBGL && !UNITY_EDITOR
 
-	public enum FormFactor { Desktop, Mobile };
+	public enum FormFactor { Desktop, Mobile, Lite };
 	public FormFactor formFactor;
 
 	[DllImport("__Internal")]
@@ -197,7 +197,9 @@ public class SliderControl : MonoBehaviour
 		cameraZ = 75;
 		camera = Camera.main.transform;
 		inputField.text="0";
-		TruckCamera();
+
+		if(formFactor != FormFactor.Lite)
+			TruckCamera();
 
 		foreach (var item in chartObjs)
 		{
@@ -233,12 +235,16 @@ public class SliderControl : MonoBehaviour
 
 	private void Start()
 	{
-		dashes = new Renderer[dashPoolSize];
-		for (int i = 0; i < dashes.Length; i++)
+		if (formFactor != FormFactor.Lite)
 		{
-			dashes[i]= Instantiate(dash,transform.position,transform.rotation).GetComponentInChildren<Renderer>();
-			dashes[i].transform.parent.gameObject.SetActive(false);
+			dashes = new Renderer[dashPoolSize];
+			for (int i = 0; i < dashes.Length; i++)
+			{
+				dashes[i] = Instantiate(dash, transform.position, transform.rotation).GetComponentInChildren<Renderer>();
+				dashes[i].transform.parent.gameObject.SetActive(false);
+			}
 		}
+
 		StartCoroutine(Counters());
 	}
 
@@ -338,15 +344,20 @@ public class SliderControl : MonoBehaviour
  
     void Update()
     {
-
+		/*
 		if (formFactor == FormFactor.Mobile)
 		{
 			Screen.fullScreen = true;
 			Screen.orientation = ScreenOrientation.Portrait;
 		}
+		*/
 
-		UpdateSky();
-		if (state == State.Intro) return;
+		if(formFactor != FormFactor.Lite)
+			UpdateSky();
+		if (formFactor != FormFactor.Lite)
+		{
+			if (state == State.Intro) return;
+		}
 		CameraParallax();
 		ImpactInput();
 	}
