@@ -333,11 +333,13 @@ public class SliderControl : MonoBehaviour
 		chartObjs[index].transformNull.gameObject.SetActive(true);
 		for (float lerp = 0; lerp < 1; lerp += Time.deltaTime / flowDur)
 		{
+			if(chartObjs[index].canvasGroup)
 			chartObjs[index].canvasGroup.alpha =lerp;
 			chartObjs[index].transformNull.localScale = chartObjs[index].restScale * chartObjPopCurve.Evaluate(lerp);
 			yield return null;
 		}
-		chartObjs[index].canvasGroup.alpha =1;
+		if (chartObjs[index].canvasGroup)
+			chartObjs[index].canvasGroup.alpha =1;
 		chartObjs[index].transformNull.localScale = chartObjs[index].restScale;
 		if(!calculatorActive) chartObjs[index].transformNull.gameObject.SetActive(false);
 	}
@@ -347,8 +349,8 @@ public class SliderControl : MonoBehaviour
 		/*
 		if (formFactor == FormFactor.Mobile)
 		{
-			Screen.fullScreen = true;
-			Screen.orientation = ScreenOrientation.Portrait;
+			//Screen.fullScreen = true;
+			//Screen.orientation = ScreenOrientation.Portrait;
 		}
 		*/
 
@@ -663,7 +665,7 @@ public class SliderControl : MonoBehaviour
 		while (true)
 		{
 
-			if (chartObjs[1].transformNull.gameObject.activeInHierarchy)
+			if (chartObjs[1].transformNull!=null && chartObjs[1].transformNull.gameObject.activeInHierarchy)
 			{
 				if (curGreenHouseGas < greenHouseGas)
 				{
@@ -677,7 +679,7 @@ public class SliderControl : MonoBehaviour
 				}
 			}
 
-			if (chartObjs[5].transformNull.gameObject.activeInHierarchy)
+			if (chartObjs[5].transformNull != null && chartObjs[5].transformNull.gameObject.activeInHierarchy)
 			{
 				if (curEmission < emission)
 				{
@@ -689,7 +691,7 @@ public class SliderControl : MonoBehaviour
 				curEmission = Mathf.Clamp(curEmission - Random.Range(0, 10), emission, float.MaxValue);
 			}
 
-			if (chartObjs[6].transformNull.gameObject.activeInHierarchy)
+			if (chartObjs[6].transformNull != null && chartObjs[6].transformNull.gameObject.activeInHierarchy)
 			{
 				if (curLamps < lamps)
 				{
@@ -701,7 +703,7 @@ public class SliderControl : MonoBehaviour
 				curLamps = Mathf.Clamp(curLamps - Random.Range(100, 1000), lamps, float.MaxValue);
 			}
 
-			if(chartObjs[7].transformNull.gameObject.activeInHierarchy)
+			if(chartObjs[7].transformNull != null && chartObjs[7].transformNull.gameObject.activeInHierarchy)
 			{
 				if (curCarbonSequestered < carbonSequestered)
 				{
