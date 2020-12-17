@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6682,13 +6682,13 @@ MonoBehaviour:
   greenHouseGasDigits: {fileID: 521875432}
   emission: 0
   emissionsText: {fileID: 0}
-  emissionsDigits: {fileID: 1626576962}
+  emissionsDigits: {fileID: 2062027406}
   lamps: 0
   lampsText: {fileID: 0}
   lampsDigits: {fileID: 353145861}
   carbonSequestered: 0
   carbonSequesteredText: {fileID: 0}
-  carbonSequesteredDigits: {fileID: 2062027406}
+  carbonSequesteredDigits: {fileID: 1626576962}
   numberObjs:
   - restScale: {x: 0.8861103, y: 0.8861105, z: 0.8861105}
     transformNull: {fileID: 680374832}
